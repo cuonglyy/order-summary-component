@@ -1,11 +1,49 @@
+:root {
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-bright-blue: hsl(245, 75%, 52%);
+    --neutral-xpale-blue: hsl(225, 100%, 98%);
+    --neutral-desat-pale-blue: hsl(224, 23%, 55%);
+    --neutral-dark-blue: hsl(223, 47%, 23%);
+
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+    font-family: 'Red Hat Display', sans-serif;
+}
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-size: 1.6rem;
 }
 
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 30rem;
+}
+
+
+/*
+    --------- FOR SCREEN READERS ---------
+*/
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
 
 
 
@@ -14,10 +52,11 @@ body {
 */
 
 .footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     font-size: 11px;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .footer a {
