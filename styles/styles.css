@@ -5,6 +5,8 @@
     --neutral-desat-pale-blue: hsl(224, 23%, 55%);
     --neutral-dark-blue: hsl(223, 47%, 23%);
 
+    --background-color: var(--primary-pale-blue);
+    --card-bkgnd-color: white;
 }
 
 html {
@@ -14,7 +16,8 @@ html {
 }
 
 body {
-    background-image: url(../images/pattern-background-mobile.svg), var(--primary-pale-blue);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-color: var(--background-color);
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
@@ -30,11 +33,34 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 30rem;
+    max-width: 32.7rem;
+    background-color: var(--card-bkgnd-color);
+}
+
+#header {
+    font-size: 2.2rem;
+    color: var(--neutral-dark-blue);
+}
+
+#hero {
+    width: 32.7rem;
 }
 
 .text-content {
     text-align: center;
+    color: var(--neutral-desat-pale-blue);
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+}
+
+#plan {
+    background-color: var(--neutral-xpale-blue);
+    display: flex;
+    align-items: center;
+}
+
+.plan-info {
+
 }
 
 
