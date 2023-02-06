@@ -1,10 +1,21 @@
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
 
 /*
     ------------ FOOTER --------------
 */
 
 .footer {
+    position: relative;
+    bottom: 0;
     font-size: 11px;
     text-align: center;
 }
