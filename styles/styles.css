@@ -9,6 +9,12 @@
     --card-bkgnd-color: white;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     /* 1rem = 10px */
     font-size: 62.5%;
@@ -29,43 +35,133 @@ body {
 }
 
 
+
+/*
+    =========== CARD STYLING ============
+*/
+
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
     max-width: 32.7rem;
-    background-color: var(--card-bkgnd-color);
-}
-
-#header {
-    font-size: 2.2rem;
-    color: var(--neutral-dark-blue);
 }
 
 #hero {
     width: 32.7rem;
+    border-radius: 2rem 2rem 0 0;
 }
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-bkgnd-color);
+    padding: 3.2rem 0;
+    border-radius: 0 0 2rem 2rem;
+}
+
+
+/*
+    ============ HEADER =============
+*/
+#header {
+    font-size: 2.2rem;
+    color: var(--neutral-dark-blue);
+    font-weight: 900;
+    margin: 0;
+}
+
+/*
+    ============ SUMMARY CONTENT =============
+*/
 
 .text-content {
     text-align: center;
     color: var(--neutral-desat-pale-blue);
     font-size: 1.5rem;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
+    width: 26.3rem;
+    margin: 1.9rem 0 2.1rem 0;
 }
+
+/*
+    ============ PLAN SECTION =============
+*/
 
 #plan {
     background-color: var(--neutral-xpale-blue);
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    padding: 1.6rem 0;
+    border-radius: 1.1rem;
+    width: 27.9rem;
+    font-size: 1.4rem;
+    margin-bottom: 2.4rem;
 }
 
-.plan-info {
+.plan__info {
+    line-height: 2.2rem;
+    margin-right: 3.3rem;
+}
+
+.plan__info  p {
+    margin: 0;
+}
+
+.plan__info > .type {
+    font-weight: 900;
+}
+
+.plan__info > .price {
+    color: var(--neutral-desat-pale-blue);
+}
+
+.plan__change {
+    position: relative;
+    font-weight: 700;
+    color: var(--primary-bright-blue);
+}
+
+.plan__change:hover {
+    color: var(--primary-bright-blue);
+}
+
+/*
+    Border styling under change (.plan__change) link
+*/
+
+/*
+    =========== PAYMENT BUTTON =============
+*/
+
+.pay-btn {
+    padding: 1.5rem 6.4rem;
+    margin-bottom: 2.4rem;
+    border-radius: 1.1rem;
+    background-color: var(--primary-bright-blue);
+    color: white;
+    border: none;
+    font-weight: 900;
+    font-size: 1.5rem;
+    box-shadow: 0 2rem 2rem hsla(245, 75%, 52%, 0.2);
+}
+
+
+/*
+    =========== CANCEL ORDER LINK ===========
+*/
+.cancel-link {
+    text-decoration: none;
+    color: var(--neutral-desat-pale-blue);
+    font-weight: 900;
+    font-size: 1.5rem;
 
 }
 
 
 /*
-    --------- FOR SCREEN READERS ---------
+    ========== FOR SCREEN READERS ===========
 */
 
 .sr-only:not(:focus):not(:active) {
@@ -81,7 +177,7 @@ body {
 
 
 /*
-    ------------ FOOTER --------------
+    ============ FOOTER ==============
 */
 
 .footer {
